@@ -2,63 +2,80 @@
   <head>
     <title>Friday Hacks Email Generator</title>
     <link href='bootstrap.css' rel='stylesheet' />
+    <style type='text/css'>
+      .generated {
+        border: 1px solid #ccc;
+        width: 100%;
+        height: 650px;
+      }
+    </style>
   </head>
   <body>
     <div class='container'>
       <h1>Friday Hacks Email Generator</h1><hr/>
       <p>Enter the necessary information. Click generate.</p>
       <p>Copy paste the generated HTML email to your favourite email client.</p>
-    <form>
-      <fieldset>
-        <legend>Talk 1</legend>
-        <dl class='dl-horizontal'>
-          <dt><label>Speaker name</label></dt>
-          <dd>
-          <input type='text' name='talk1speakername' value='' />
-          </dd>
-          <dt><label>Speaker profile</label></dt>
-          <dd>
-            <textarea name='talk1speakerprof' rows='5'></textarea>
-          </dd>
-          <dt><label>Talk Title</label></dt>
-          <dd><input type='text' name='talk1title' value='' /></dd>
-          <dt><label>Talk Description</label></dt>
-          <dd>
-            <textarea name='talk1talkdesc' rows='5'></textarea>
-          </dd>
-        </dl>
+      <div class='row-fluid'>
+        <div class='span6'>
+          <form>
+            <fieldset>
+              <legend>Talk 1</legend>
+              <dl class='dl-horizontal'>
+                <dt><label>Speaker name</label></dt>
+                <dd>
+                <input type='text' name='talk1speakername' value='' />
+                </dd>
+                <dt><label>Speaker profile</label></dt>
+                <dd>
+                <textarea name='talk1speakerprof' rows='5'></textarea>
+                </dd>
+                <dt><label>Talk Title</label></dt>
+                <dd><input type='text' name='talk1title' value='' /></dd>
+                <dt><label>Talk Description</label></dt>
+                <dd>
+                <textarea name='talk1talkdesc' rows='5'></textarea>
+                </dd>
+              </dl>
 
-      </fieldset>
-      <fieldset>
-        <legend>Talk 2</legend>
-        <dl class='dl-horizontal'>
-          <dt>
-            <label>Speaker name</label>
-          </dt>
-          <dd>
-          <input type='text' name='talk2speakername' value='' />
-          </dd>
-          <dt>
-            <label>Speaker Profile</label>
-          </dt>
-          <dd>
-            <textarea name='talk2speakerprof' rows='5'></textarea>
-          </dd>
-          <dt>
-            <label>Talk Title</label>
-          </dt>
-          <dd><input type='text' name='talk2title' value='' /></dd>
-          <dt>
-            <label>Talk Description</label>
-          </dt>
-          <dd>
-            <textarea name='talk2talkdesc' rows='5'></textarea>
-          </dd>
-        </dl>
-      </fieldset>
+            </fieldset>
+            <fieldset>
+              <legend>Talk 2</legend>
+              <dl class='dl-horizontal'>
+                <dt>
+                <label>Speaker name</label>
+                </dt>
+                <dd>
+                <input type='text' name='talk2speakername' value='' />
+                </dd>
+                <dt>
+                <label>Speaker Profile</label>
+                </dt>
+                <dd>
+                <textarea name='talk2speakerprof' rows='5'></textarea>
+                </dd>
+                <dt>
+                <label>Talk Title</label>
+                </dt>
+                <dd><input type='text' name='talk2title' value='' /></dd>
+                <dt>
+                <label>Talk Description</label>
+                </dt>
+                <dd>
+                <textarea name='talk2talkdesc' rows='5'></textarea>
+                </dd>
+              </dl>
+            </fieldset>
 
-      <input type='button' class='btn' name='generate' value='Generate' />
-    </form>
-  </div>
+            <input type='button' class='btn btn-inverse btn-large' name='generate' value='Generate' />
+          </form>
+        </div> <!--span6-->
+
+
+        <div class='span6'>
+          <legend>Generated Email</legend>
+          <div contentEditable='true' class='generated'></div>
+        </div>
+      </div> <!--row-fluid-->
+    </div>
   </body>
 </html>
